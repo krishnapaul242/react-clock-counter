@@ -1,6 +1,6 @@
 {
   "name": "react-clock-counter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This library provides a hook to create a counter with custom datetime and update the clock on provided interval.",
   "author": "krishnapaul242",
   "license": "MIT",
