@@ -10,18 +10,28 @@
 npm install --save react-clock-counter
 ```
 
-## Usage
+## Usage with provided component.
 
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-clock-counter'
-import 'react-clock-counter/dist/index.css'
+import { ClockCounter } from 'react-clock-counter'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <ClockCounter />
   }
+}
+```
+
+## Usage with hook
+
+```tsx
+import React from 'react';
+import { useClockCounter } from 'react-clock-counter'
+function Example() {
+    const {time} = useClockCounter();
+    return <div>{time.toString()}</div>
 }
 ```
 
