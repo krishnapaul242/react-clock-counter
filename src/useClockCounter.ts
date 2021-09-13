@@ -13,6 +13,7 @@ export interface useClockCounterReturnProps {
   pause: () => Date
   start: () => Date
   end: () => Date
+  setStart: (newdate: Date, startASAP: boolean) => void
 }
 
 const defaultProps: Pick<
@@ -54,6 +55,10 @@ export const useClockCounter = (
     end: () => {
       setTicking(false)
       return CurrentTime
+    },
+    setStart: (newdate: Date, startASAP: boolean = false) => {
+      setCurrentTime(newdate)
+      if (!startASAP) setTicking(false)
     }
   }
 }
